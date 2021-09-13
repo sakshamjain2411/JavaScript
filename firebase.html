@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+</head>
+
+<body>
+    Name <input type="text" id="name"><br><br>
+    Roll No <input type="text" id="rno"><br><br>
+    Section <input type="text" id="section"><br><br>
+    Gender <input type="text" id="gender"><br><br>
+    <br>
+    <button id="insert">Insert</button>
+    <button id="fetch">Fetch</button>
+    <button id="delete"></button>
+    <button id="view"></button>
+    <br><br>
+
+    <div class="table">
+        <table id="demoTable">
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Section</th>
+                <th>Gender</th>
+            </tr>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!--Firebase Libraries-->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+    <script src="js/firebase.js"></script>
+</body>
+
+</html>

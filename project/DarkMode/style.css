@@ -1,0 +1,21 @@
+.container {
+    padding: 2px;
+}
+
+.container p {
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dark .container {
+    padding: 2px;
+    background: black;
+}
+
+.dark .container p {
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}

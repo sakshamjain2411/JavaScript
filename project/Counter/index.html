@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <button id="minus1">-</button>
+    <button id="display">0</button>
+    <button id="plus1">+</button>
+</body>
+
+<script>
+    minus = document.querySelector("#minus1");
+    minus.addEventListener("click", e => {
+        count = document.querySelector("#display").innerText;
+        count --;
+        document.querySelector("#display").innerText = count;
+    });
+
+    plus = document.querySelector("#plus1");
+    plus.addEventListener("click", e => {
+        count = document.querySelector("#display").innerText;
+        count ++;
+        document.querySelector("#display").innerText = count;
+    })
+</script>
+</html>

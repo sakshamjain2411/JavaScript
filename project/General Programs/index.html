@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Programs</title>
+</head>
+<body>
+    <input type="text" id="inputField">
+    <button id="palandrome">Palandrome</button>
+</body>
+<script>
+    const inputField = document.querySelector("#inputField");
+    document.querySelector("#palandrome").addEventListener("click", function() {
+        Str = inputField.value;
+        newStr = Str.split('');
+        newStr = newStr.reverse();
+        newStr = newStr.join('');
+        if(newStr == Str) {
+            console.log("Palandrome");
+        }
+        else {
+            console.log("Not a Palandrome");
+        }
+    })
+</script>
+</html>

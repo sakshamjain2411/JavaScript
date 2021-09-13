@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .box {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /* left: 50%; */
+        /* top: 50%; */
+        /* transform: translate(100px, 100px); */
+        /* transform: translateY(100px); */
+    }
+    .box2 {
+        background-color: grey;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /* left: 50%; */
+        /* top: 50%; */
+        transform: translate(-50%, -50%);
+        /* transform: translateY(100px); */
+    }
+    .box3 {
+        background-color: #f37070;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /* left: 50%; */
+        /* top: 50%; */
+        transform: translate(-100%, -100%);
+        /* transform: translateY(100px); */
+    }
+    .box4 {
+        background-color: #9af370;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+    .box5 {
+        background-color: #70f3e8;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: calc(100% - 100px);
+    }
+    .box6 {
+        background-color: #f37070;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: calc(100% - 100px);
+    }
+    .box7 {
+        background-color: #f3e670;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 100%;
+        top:100%;
+        transform: translate(-100%,-100%);
+    }
+    .box8 {
+        background-color: #000000;
+        color: white;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .box9 {
+        background-color: #000;
+        color: white;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 100%;
+        top:50%;
+        transform: translate(-100%,-50%);
+    }
+    .box10 {
+        background-color: #000000;
+        color: white;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .box11 {
+        background-color: #000000;
+        color: white;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top:100%;
+        transform: translate(-50%,-100%);
+    }
+</style>
+<body>
+    <div class="box">
+        <p>Hello</p>
+    </div>
+    <div class="box2">
+        <p>Hello</p>
+    </div>
+    <div class="box3">
+        <p>Hello</p>
+    </div>
+    <div class="box4">
+        <p>Top Left</p>
+    </div>
+    <div class="box5">
+        <p>Top Right</p>
+    </div>
+    <div class="box6">
+        <p>Bottom Left</p>
+    </div>
+    <div class="box7">
+        <p>Bottom Right</p>
+    </div>
+    <div class="box8">
+        <p>Left Center</p>
+    </div>
+    <div class="box9">
+        <p>Right Center</p>
+    </div>
+    <div class="box10">
+        <p>Top Center</p>
+    </div>
+    <div class="box11">
+        <p>Bottom Center</p>
+    </div>
+</body>
+</html>

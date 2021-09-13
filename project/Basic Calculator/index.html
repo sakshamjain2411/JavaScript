@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<style>
+    .container {
+        height: 400px;
+        width: 400px;
+    }
+    .display input[type="text"] {
+        width: 100%;
+        margin: 0 10px;
+    }
+    .display input[type="text"]:first-child {
+        width: 100%;
+        height: 30px;
+        margin: 0 10px;
+    }
+    .button-grid {
+        margin: 0 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="display">
+            <input type="text" id="displayScreen">
+            <input type="text" id="outputScreen">
+        </div>
+        <div class="button-grid">
+            <button id="num7" value="7">7</button>
+            <button id="num8" value="8">8</button>
+            <button id="num9" value="9">9</button>
+            <button value="/">/</button>
+            <button value="4">4</button>
+            <button value="5">5</button>
+            <button value="6">6</button>
+            <button value="*">*</button>
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button value="-">-</button>
+            <button value="clear">Clear</button>
+            <button value="0">0</button>
+            <button value="=">=</button>
+            <button value="+">+</button>
+        </div>
+    </div>
+</body>
+<script>
+    let calStack = [];
+    const buttons = document.querySelectorAll("button");
+    const displayScreen = document.querySelector("#displayScreen");
+    const outputScreen = document.querySelector("#outputScreen");
+    function calculate(a,b,operator) {
+        let val1 = parseInt(a);
+        let val2 = parseInt(b);
+        if(operator == '+') {
+            return val1 + val2;
+        }
+        if(operator == '-') {
+            return val1 - val2;
+        }
+        if(operator == '*') {
+            return val1 * val2;
+        }
+        if(operator == '/') {
+            return val1 / val2;
+        }
+    }
+    buttons.forEach(function(button){
+        button.addEventListener("click", e => {
+            if(isNaN(parseInt(button.value)))
+            {
+                if(button.value == "clear") {
+                    displayScreen.value = "";
+                }
+                else if (button.value == "=") {
+                    calStack = displayScreen.value.split(" ");
+                    displayScreen.value = "";
+                    outputScreen.value = calculate(calStack[0],calStack[2],calStack[1]);
+                }
+                else {
+                    calStack.push(parseInt(displayScreen.value));
+                    calStack.push(button.value);
+                    displayScreen.value = displayValue.concat(` ${button.value} `)
+                }
+            }
+            else {
+                displayValue = displayScreen.value;
+                displayValue = displayValue.concat(button.value);
+                displayScreen.value = displayValue;
+            }
+        })
+    })
+</script>
+</html>

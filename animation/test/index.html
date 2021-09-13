@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<style>
+    img {
+        max-width: 180px;
+        height: 54px;
+    }
+    .logo-box {
+        padding: 15px;
+        background: #e6e6e6;
+        height: 240px;
+        width: 240px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info { 
+        position: relative;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .expand-icon {
+        position: relative;
+        top: calc(100% - 40px);
+        display: flex;
+        height: 40px;
+        width: 40px;
+        color: rgb(151, 151, 151);
+        background: #fff;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        transition: width 0.5s ease-in-out, height 0.5s ease-in-out, top 0.5s ease-in-out, border-top-right-radius 0.5s;
+        border-top-right-radius: 10px;
+        cursor: pointer;
+        flex-direction: column;
+        z-index: 9;
+    }
+    .expand-content {
+        position: relative;
+        top: calc(100% - 80px);
+        display: flex;
+        height: 40px;
+        width: 40px;
+        color: rgb(151, 151, 151);
+        background: #fff;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        transition: width 0.5s ease-in-out, height 0.5s ease-in-out, top 0.5s ease-in-out, border-top-right-radius 0.5s;
+        /* border-top-right-radius: 10px; */
+        cursor: pointer;
+        flex-direction: column;
+    }
+
+    .expand-content:hover {
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        border-top-right-radius: 0px;
+    }
+</style>
+<body>
+    <div class="logo-box">
+        <img src="1-light.png" alt="">
+
+        <div class="info">
+            <div class="content">
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+                <div class="entry">
+                    <div>
+                        <h5>Google</h5>
+                        <a href="#">www.google.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
